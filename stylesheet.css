@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+body{
+    color: #ededed;
+     background: #0a1a2f;
+    
+    
+}
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px ,10px;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    cursor:default ;
+    opacity: 0;
+    padding:20px;
+    animation: slideRight 1s ease forwards;    
+}
+.navbar a{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    margin: 20px;
+    transition: 0.4s;
+    transition: .3s;
+    opacity: 0;
+    animation: slidetop .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+.navbar a:hover{
+   color: aqua;
+}
+
+/*........................................  Homw  ...........*/
+.homw{
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+    height: 100vh;
+    background: url(./fresh-autumn-leaves-reveal-vibrant-organic-pattern-generated-by-ai.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+   
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay:  .7s;
+}
+.home-content h3 :nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards; 
+    animation-delay: .7s;
+
+}
+.home-content h3 span{
+  color: #00FFFF;
+
+}
+
+.home-content h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin: -3px 0 ; 
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-content p{
+    font-size: 20px;
+    opacity: 0;
+    animation:slideLeft 1s ease forwards ;
+    animation-delay: 1s;
+} 
+.home-sci a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid#0ef;
+    border-radius: 50%;
+    font-size: 23px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay:calc(.2s * var(--i));
+    margin: 30px 15px 30px 0
+ }
+.home-sci a:hover{
+        background-color: #0ef;
+        color:#081b29 ;
+        box-shadow: 1px 5px 20px #0ef;
+}
+ 
+.btn-box{
+        display: inline-block;
+        padding: 10px 25px;
+        background: #0ef;
+        border-radius: 30px;
+        font-size: 15px;
+        letter-spacing:1px ;
+        text-decoration: none;
+        font-weight: 600;
+        opacity: 0;
+        animation: slidetop .5s ease forwards;
+        animation-delay: .2s;
+        box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef;
+        
+        
+}
+.btn-box:hover{
+        box-shadow: 0 0 5px #00FFFF,
+        0 0 25px #00FFFF, 0 0 50px #00FFFF,
+        0 0 100px #00FFFF, 0 0 200px #00FFFF;
+
+}
+
+
+/*-.........................Animation for home............................................-*/
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+} 
+
+@keyframes slideLeft{
+     0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+ 
+
+ 
+@keyframes slidetop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity:1;
+    }
+} 
+
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity:1;
+    }
+}  
+
+
+
+/* ..................................................about section..........................................................................*/
+
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* spacing between image and text */
+  padding: 80px 10%;
+  background: #081b29;
+  color: #333;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.about-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid white;
+  object-fit: cover;
+  background: conic-gradient(cyan, purple, cyan);
+  padding: 6px;
+}
+
+
+.about-text {
+  flex: 3;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #ededed;
+}
+
+.about-text h2 span {
+  color: #0ef;
+}
+
+.about-text h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: justify;
+  color: #fff;
+}
+
+
+/*...............................................Services of my........................................................*/
+/* Services Section */
+.services {
+  padding: 80px 10%;
+  background: #0a1a2f;
+  text-align: center;
+}
+
+.services .sub-title {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #ededed;
+}
+
+.services .sub-title span {
+  color: #0ef;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-box {
+  background: #112240;
+  padding: 30px;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s forwards;
+}
+
+.service-box i {
+  font-size: 50px;
+  color: #0ef;
+  margin-bottom: 20px;
+}
+
+.service-box h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.service-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.service-box:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px #0ef;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-box:nth-child(4) {
+  border: 1px solid #0ef;
+  background: linear-gradient(145deg, #112240, #081b29);
+}
+
+.service-box:nth-child(4):hover {
+  box-shadow: 0 0 20px cyan, 0 0 40px purple, 0 0 60px cyan;
+  transform: translateY(-10px) scale(1.08);
+}
+
+
+/*------------------------------------ Skills Section ----------------------------------------------------------*/
+
+
+
+/* Skills Section */
+.skills {
+  padding: 80px 10%;
+  background: #0a1a2f;
+  text-align: center;
+}
+
+.skills .sub-title {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #ededed;
+}
+
+.skills .sub-title span {
+  color: #0ef;
+}
+
+.skills-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #333;
+  border-radius: 10px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #0ef;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+
+
+
+
+
+
+/* ================= Portfolio Section ================= */
+
+.portfolio {
+  padding: 80px 10%;
+  background: #081b29;
+  text-align: center;
+}
+
+.portfolio .sub-title {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #ededed;
+}
+
+.portfolio .sub-title span {
+  color: #0ef;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-box {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #0ef);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s ease;
+  padding: 20px;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  opacity: 1;
+}
+
+.portfolio-layer h4 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.portfolio-layer p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.portfolio-layer a {
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  color: #081b29;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+
+
+
+
+/* ================= Contact Section ================= */
+
+.contact {
+  padding: 80px 10%;
+  background: #0a1a2f;
+  text-align: center;
+}
+
+.contact .sub-title {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #ededed;
+}
+
+.contact .sub-title span {
+  color: #0ef;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.contact-info ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.contact-info ul li i {
+  color: #0ef;
+  margin-right: 10px;
+}
+
+.contact-social a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #0ef;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.contact-social a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 15px #0ef;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #112240;
+  border: none;
+  outline: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+
+
